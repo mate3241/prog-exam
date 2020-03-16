@@ -74,7 +74,7 @@ const switch5 = (num) => {
     default: console.log('a szám nem nulla, egy, vagy kettő');
   }
 };
-switch5(1); 
+switch5(1);
 switch5(5);
 
 // feladat 6.
@@ -113,7 +113,9 @@ const divide = (num1, num2) => {
 module.exports = { add, subtract, multiply, divide };
 
 // feladat 8.
-
+const readline = require('readline-sync');
+const x = readline.questionInt('hány soros legyen a mátrix? ');
+const y = readline.questionInt('hány oszlopos legyen a mátrix? ');
 const feladat8 = (x, y) => {
   const array = new Array(x);
   for (let i = 0; i < array.length; i++) {
@@ -126,6 +128,7 @@ const feladat8 = (x, y) => {
       num++;
     }
   }
+
   return array;
 };
-console.log(feladat8(3, 3));
+console.log(feladat8(x, y));
